@@ -177,7 +177,7 @@ function avisoDe(c){ const p=SHARED.partidos[c.fecha]; const hora=(p&&p.hora)||c
   const l=String(p.nota).split("\n"); return {quedada:(l[0]==="__defecto__"||!l[0].trim())?notaPorDefecto(hora):l[0], extra:l.slice(1).join("\n").trim()}; }
 function notaDe(c){ const a=avisoDe(c); return [a.quedada,a.extra].filter(Boolean).join("\n"); }
 
-const API = "https://script.google.com/macros/s/AKfycbwH6hJVLzJNo9zdQ4oOxI2v-zTGJD1noqxFB_fEviRsopyzJBtejyStfWm074axXtz-uQ/exec";
+const API = "https://script.google.com/macros/s/AKfycbyRtwsHbIuRW6jG3V6liyj_AUzOGJiPPyli9SBTBPx2aoIGRNPVqxJ1jfrfwxmbng4z/exec";
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const nice=n=>{const i=n.indexOf(", ");return i<0?n:n.slice(i+2)+" "+n.slice(0,i);};
